@@ -2,13 +2,10 @@ package com.ena.deliveryaggregator.service;
 
 import com.ena.deliveryaggregator.entity.Slot;
 import com.ena.deliveryaggregator.repo.SlotRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.sql.Time;
 import java.sql.Timestamp;
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -23,7 +20,9 @@ public class SlotService {
 
     public List<Slot> findAll() {
         return slotRepository.findAll();
-    };
+    }
+
+    ;
 
     public Slot add(Slot slot) {
         return slotRepository.save(slot);
